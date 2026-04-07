@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LeafGuard Pro – Gutter Protection System</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #2a7a2a;
+    --green-dark: #1b5c1b;
+    --green-light: #3a9c3a;
+    --orange: #e8630a;
+    --orange-light: #f5841f;
+    --blue-dark: #0d2b6b;
+    --blue-mid: #1a3fa8;
+    --blue-bright: #2557d6;
+    --white: #ffffff;
+    --off-white: #f7f8f4;
+    --gray-light: #e8eae4;
+    --gray-mid: #9aa09a;
+    --text: #1a1f1a;
+    --text-muted: #5a6458;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--blue-dark);
+    color: var(--white);
+    text-align: center;
+    font-size: 13px;
+    padding: 8px 16px;
+    letter-spacing: 0.3px;
+  }
+  .topbar span { color: var(--orange-light); font-weight: 700; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--white);
+    border-bottom: 2px solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 48px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--green);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+  }
+  .logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: var(--green-dark);
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .logo-text span { color: var(--orange); }
+  .logo-sub { font-size: 10px; color: var(--text-muted); letter-spacing: 1.5px; text-transform: uppercase; }
+  nav .nav-cta {
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 11px 28px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+  nav .nav-cta:hover { background: var(--orange-light); }
+
+  /* ── HERO ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 540px;
+    background: linear-gradient(135deg, var(--off-white) 60%, #d4ecd4 100%);
+  }
+  .hero-content {
+    padding: 60px 48px 60px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    width: fit-content;
+    letter-spacing: 0.5px;
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    line-height: 1.18;
+    color: var(--text);
+  }
+  .hero h1 .highlight {
+    color: var(--orange);
+    font-style: italic;
+  }
+  .hero-sub {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 460px;
+  }
+  .hero-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hero-bullet {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .bullet-num {
+    width: 24px;
+    height: 24px;
+    background: var(--blue-mid);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .hero-cta-group { display: flex; gap: 14px; align-items: center; margin-top: 6px; }
+  .btn-primary {
+    background: var(--orange);
+    color: white;
+    padding: 15px 36px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: background 0.2s, transform 0.1s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); }
+  .hero-note { font-size: 12px; color: var(--text-muted); }
+  .hero-image-col {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-img-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #c8d8c8, #a8c4a8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--green-dark);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .hero-img-placeholder svg { opacity: 0.4; }
+  .hero-stats {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 14px 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    display: flex;
+    gap: 28px;
+  }
+  .hero-stat-item { text-align: center; }
+  .hero-stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--green-dark); line-height: 1; }
+  .hero-stat-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+  /* ── SECTION COMMONS ── */
+  section { padding: 72px 64px; }
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .section-sub {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 560px;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .how-it-works { background: var(--off-white); }
+  .how-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .img-placeholder {
+    background: linear-gradient(145deg, #ccd8cc, #aabfaa);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #5a7a5a;
+    font-size: 13px;
+    font-weight: 600;
+    border: 2px dashed #8aaa8a;
+  }
+  .img-placeholder svg { opacity: 0.5; }
+  .img-ph-tall { height: 380px; }
+  .img-ph-wide { height: 280px; width: 100%; }
+  .img-ph-med { height: 220px; width: 100%; }
+  .img-ph-sm { height: 170px; width: 100%; }
+  .feature-steps { display: flex; flex-direction: column; gap: 28px; }
+  .step {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 36px;
+    height: 36px;
+    background: var(--green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .step-body h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+  .step-body p { color: var(--text-muted); font-size: 14px; line-height: 1.55; }
+
+  /* ── BLOCKS SECTION ── */
+  .blocks-section { background: var(--white); }
+  .blocks-label {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .blocks-label .section-title { text-align: center; }
+  .blocks-label .section-sub { margin: 0 auto; text-align: center; }
+  .blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .block-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid var(--gray-light);
+  }
+  .block-card-img { height: 180px; background: linear-gradient(145deg, #c8d8c8, #a8baa8); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #5a7a5a; font-size: 12px; font-weight: 600; border-bottom: 1px dashed #8aaa8a; }
+  .block-card-body { padding: 16px 18px; }
+  .block-card-body h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .block-card-body p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+  /* ── TWO-COL FEATURES ── */
+  .feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    padding: 64px;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .feature-row.reverse { direction: rtl; }
+  .feature-row.reverse > * { direction: ltr; }
+  .feature-row.bg-light { background: var(--off-white); }
+  .feature-text h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .feature-text p { color: var(--text-muted); font-size: 15px; line-height: 1.65; }
+  .feature-text p strong { color: var(--text); }
+
+  /* ── MICROMESH CALLOUT ── */
+  .micromesh-callout {
+    background: var(--blue-dark);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 360px;
+  }
+  .micromesh-text {
+    padding: 60px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+  .micromesh-text .kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--orange-light);
+  }
+  .micromesh-text h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+    line-height: 1.2;
+  }
+  .micromesh-text p { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.8); }
+  .micromesh-specs {
+    display: flex;
+    gap: 32px;
+    margin-top: 8px;
+  }
+  .spec-chip {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 10px 16px;
+    text-align: center;
+  }
+  .spec-chip-val { font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: var(--orange-light); }
+  .spec-chip-label { font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 2px; letter-spacing: 0.5px; }
+  .micromesh-img-col {
+    background: linear-gradient(145deg, #1a3a5a, #0d2240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    color: rgba(255,255,255,0.4);
+    font-size: 13px;
+    font-weight: 600;
+    border-left: 2px dashed rgba(255,255,255,0.15);
+  }
+
+  /* ── REVIEWS ── */
+  .reviews { background: var(--off-white); }
+  .reviews-header { text-align: center; margin-bottom: 44px; }
+  .reviews-header .section-title { text-align: center; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .review-card {
+    background: white;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--gray-light);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .stars { color: #f5a623; font-size: 16px; letter-spacing: 1px; }
+  .review-title { font-size: 15px; font-weight: 700; }
+  .review-text { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .reviewer { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+  .reviewer-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .reviewer-name { font-size: 13px; font-weight: 600; }
+
+  /* ── VETERANS ── */
+  .veterans {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 340px;
+  }
+  .veterans-text {
+    padding: 60px 56px;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+  }
+  .veterans-text h2 { font-family: 'DM Serif Display', serif; font-size: 32px; }
+  .veterans-text p { color: var(--text-muted); font-size: 15px; line-height: 1.65; }
+  .veterans-text p strong { color: var(--text); }
+  .veterans-img {
+    background: linear-gradient(145deg, #c0c8d8, #9aa4b8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #5a6478;
+    font-size: 13px;
+    font-weight: 600;
+    border-left: 2px dashed #8a94a8;
+  }
+
+  /* ── COST ESTIMATOR ── */
+  .cost-estimator {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
+    padding: 72px 64px;
+    text-align: center;
+  }
+  .cost-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    font-size: 13px;
+    padding: 8px 18px;
+    border-radius: 24px;
+    margin-bottom: 18px;
+  }
+  .cost-estimator h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    color: white;
+    margin-bottom: 36px;
+    line-height: 1.2;
+  }
+  .estimator-card {
+    background: white;
+    border-radius: 14px;
+    padding: 40px 40px 44px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+  }
+  .estimator-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 22px; }
+  .sqft-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .sqft-btn {
+    border: 2px solid var(--gray-light);
+    background: white;
+    border-radius: 8px;
+    padding: 16px 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .sqft-btn:hover { border-color: var(--blue-mid); background: #f0f4ff; }
+  .sqft-btn.active { border-color: var(--orange); background: #fff4ee; }
+  .sqft-num { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--text); }
+  .sqft-unit { font-size: 11px; color: var(--text-muted); letter-spacing: 0.5px; }
+  .estimate-btn {
+    width: 100%;
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 17px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+  }
+  .estimate-btn:hover { background: var(--orange-light); }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--green-dark);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    padding: 28px 64px;
+    flex-wrap: wrap;
+  }
+  .trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; }
+  .trust-icon { font-size: 22px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--text);
+    color: rgba(255,255,255,0.7);
+    padding: 36px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+  .footer-links a:hover { color: white; }
+  .footer-copy { font-size: 12px; }
+  .social-icons { display: flex; gap: 12px; }
+  .social-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+  .social-icon:hover { background: var(--green); }
+
+  /* ── PLACEHOLDER SVG ICON ── */
+  .ph-icon {
+    width: 56px;
+    height: 56px;
+    opacity: 0.35;
+  }
+
+  @media (max-width: 860px) {
+    .hero, .how-grid, .feature-row, .micromesh-callout, .veterans, .reviews-grid, .blocks-grid {
+      grid-template-columns: 1fr;
+    }
+    .feature-row.reverse { direction: ltr; }
+    section, .feature-row { padding: 48px 24px; }
+    nav { padding: 14px 20px; }
+    .hero-content { padding: 40px 24px; }
+    .trust-bar { gap: 24px; padding: 24px; }
+    footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
+    .sqft-options { grid-template-columns: repeat(2, 1fr); }
+    .cost-estimator { padding: 48px 20px; }
+    .micromesh-text { padding: 40px 28px; }
+    .veterans-text { padding: 40px 28px; }
+    .hero-stats { left: 12px; bottom: 12px; gap: 16px; }
+    .hero h1 { font-size: 30px; }
+    .section-title { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  🏆 America's <span>#1 Rated</span> Gutter Protection System — Available in Your Location!
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">
+    <div class="logo-icon">🍃</div>
+    <div>
+      <div class="logo-text">Leaf<span>Guard</span> Pro</div>
+      <div class="logo-sub">Gutter Protection</div>
+    </div>
+  </a>
+  <a href="#estimate" class="nav-cta">Get Free Estimate</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="hero-content">
+    <div class="hero-badge">📍 Available in Your Location!</div>
+    <h1>How Over <span class="highlight">410,000 Americans</span> Increased Their Property Value In Under 6 Hours*</h1>
+    <p class="hero-sub">Ideal for detached and semi-detached homes with sloped roofs.</p>
+    <div class="hero-bullets">
+      <div class="hero-bullet"><div class="bullet-num">1</div> Lifetime Warranty With No-Clog Guarantee</div>
+      <div class="hero-bullet"><div class="bullet-num">2</div> Helps Protect Foundation &amp; Roof</div>
+      <div class="hero-bullet"><div class="bullet-num">3</div> High Filtration Ability — 275 Microns Fine</div>
+      <div class="hero-bullet"><div class="bullet-num">4</div> Stainless Steel Resists Rust &amp; Decay</div>
+      <div class="hero-bullet"><div class="bullet-num">5</div> Award-Winning Gutter Protection System</div>
+    </div>
+    <div class="hero-cta-group">
+      <a href="#estimate" class="btn-primary">Get Free Estimate</a>
+    </div>
+    <div class="hero-note">* Installation time may vary depending on home size and scope of work.</div>
+  </div>
+  <div class="hero-image-col">
+    <div class="hero-img-placeholder">
+      <svg class="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="12" width="56" height="40" rx="4" stroke="#2a7a2a" stroke-width="2.5"/>
+        <circle cx="24" cy="28" r="8" stroke="#2a7a2a" stroke-width="2.5"/>
+        <path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#2a7a2a" stroke-width="2.5" stroke-linejoin="round"/>
+      </svg>
+      Add your hero image here
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat-item">
+        <div class="hero-stat-num">42M+</div>
+        <div class="hero-stat-label">Feet Installed</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-num">0</div>
+        <div class="hero-stat-label">Clogged Gutters</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-num">6 hrs</div>
+        <div class="hero-stat-label">Avg. Install</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">🛡️</span> Lifetime No-Clog Guarantee</div>
+  <div class="trust-item"><span class="trust-icon">🏠</span> Protects Foundation &amp; Roof</div>
+  <div class="trust-item"><span class="trust-icon">⭐</span> America's #1 Rated System</div>
+  <div class="trust-item"><span class="trust-icon">🔧</span> Installs on Existing Gutters</div>
+</div>
+
+<!-- WHAT IT BLOCKS -->
+<section class="blocks-section">
+  <div class="blocks-label">
+    <div class="section-label">Protection</div>
+    <h2 class="section-title">Protects Your Gutter From Clogs</h2>
+    <p class="section-sub">Prevents common debris from entering the gutter that can cause costly damage.</p>
+  </div>
+  <div class="blocks-grid">
+    <div class="block-card">
+      <div class="block-card-img">
+        <svg class="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="#5a7a5a" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#5a7a5a" stroke-width="2"/></svg>
+        Photo placeholder
+      </div>
+      <div class="block-card-body"><h4>🍂 No Leaves</h4><p>Micromesh blocks fallen leaves before they enter and clog your gutters.</p></div>
+    </div>
+    <div class="block-card">
+      <div class="block-card-img">
+        <svg class="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="#5a7a5a" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#5a7a5a" stroke-width="2"/></svg>
+        Photo placeholder
+      </div>
+      <div class="block-card-body"><h4>🌲 No Pine Needles</h4><p>Even tiny pine needles are stopped by the 275-micron fine stainless mesh.</p></div>
+    </div>
+    <div class="block-card">
+      <div class="block-card-img">
+        <svg class="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="#5a7a5a" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#5a7a5a" stroke-width="2"/></svg>
+        Photo placeholder
+      </div>
+      <div class="block-card-body"><h4>🌱 No Seed Pods</h4><p>Seed pods and helicopters can't find their way into your gutters.</p></div>
+    </div>
+    <div class="block-card">
+      <div class="block-card-img">
+        <svg class="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="#5a7a5a" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#5a7a5a" stroke-width="2"/></svg>
+        Photo placeholder
+      </div>
+      <div class="block-card-body"><h4>🪵 No Sticks</h4><p>Twigs and sticks shed off the surface thanks to the sloped design.</p></div>
+    </div>
+    <div class="block-card">
+      <div class="block-card-img">
+        <svg class="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="#5a7a5a" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#5a7a5a" stroke-width="2"/></svg>
+        Photo placeholder
+      </div>
+      <div class="block-card-body"><h4>🐛 No Insects</h4><p>Keeps out insects and other pests that nest in moist, clogged gutters.</p></div>
+    </div>
+    <div class="block-card">
+      <div class="block-card-img">
+        <svg class="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="#5a7a5a" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#5a7a5a" stroke-width="2"/></svg>
+        Photo placeholder
+      </div>
+      <div class="block-card-body"><h4>🐀 No Rodents</h4><p>Sealed coverage eliminates entry points for small rodents and birds.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-title">Award-Winning Technology That Performs</h2>
+  <div class="how-grid">
+    <div class="img-placeholder img-ph-tall">
+      <svg class="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="#5a7a5a" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#5a7a5a" stroke-width="2"/></svg>
+      Add your image here
+    </div>
+    <div class="feature-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Professionals Clean Your Existing Gutters</h4>
+          <p>Our certified team arrives, cleans, and realigns your gutters completely — for free — saving you thousands in replacement costs.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>LeafGuard Pro Is Installed Over Existing Gutters</h4>
+          <p>No need to replace your gutters. Our system installs directly on top, saving you thousands and reducing installation time to ~6 hours.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Water Flows Through, Debris Sheds Off</h4>
+          <p>Even in the worst downpours, water enters the gutter while debris is effectively shed away from your home.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Backed by a Lifetime No-Clog Guarantee</h4>
+          <p>We're so confident in our system that we offer a true lifetime warranty — if your gutters clog, we fix it free.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MICROMESH TECHNOLOGY -->
+<div class="micromesh-callout">
+  <div class="micromesh-text">
+    <div class="kicker">Technology</div>
+    <h2>The Micromesh Technology</h2>
+    <p>To protect your gutters from debris, our micromesh screen is made out of surgical grade stainless steel which is unlikely to rust or corrode. At only 275 microns fine, common debris simply cannot get through.</p>
+    <div class="micromesh-specs">
+      <div class="spec-chip">
+        <div class="spec-chip-val">275μ</div>
+        <div class="spec-chip-label">Microns Fine</div>
+      </div>
+      <div class="spec-chip">
+        <div class="spec-chip-val">316</div>
+        <div class="spec-chip-label">Surgical Grade Steel</div>
+      </div>
+      <div class="spec-chip">
+        <div class="spec-chip-val">∞</div>
+        <div class="spec-chip-label">Lifetime Warranty</div>
+      </div>
+    </div>
+  </div>
+  <div class="micromesh-img-col">
+    <svg width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="rgba(255,255,255,0.3)" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="rgba(255,255,255,0.3)" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="rgba(255,255,255,0.3)" stroke-width="2"/></svg>
+    <span style="color:rgba(255,255,255,0.3); font-size:13px; font-weight:600;">Add your image here</span>
+  </div>
+</div>
+
+<!-- AFFORDABLE -->
+<div class="feature-row bg-light">
+  <div class="img-placeholder img-ph-wide">
+    <svg class="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="#5a7a5a" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#5a7a5a" stroke-width="2"/></svg>
+    Add your image here
+  </div>
+  <div class="feature-text">
+    <h2>Why LeafGuard Pro Is So Affordable?</h2>
+    <p>LeafGuard Pro installs directly on top of your existing gutters — so you're <strong>not required to buy all new gutters</strong>. This saves you thousands in material and labor costs. Our certified installers handle the entire job in a single visit, typically under 6 hours.</p>
+  </div>
+</div>
+
+<!-- PROTECTS HOME -->
+<div class="feature-row reverse">
+  <div class="img-placeholder img-ph-wide">
+    <svg class="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="#5a7a5a" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#5a7a5a" stroke-width="2"/></svg>
+    Add your image here
+  </div>
+  <div class="feature-text">
+    <h2>LeafGuard Pro Helps Protect Your Entire Home</h2>
+    <p>From roof to foundation, damage caused by clogged gutters can be devastating for your home. With LeafGuard Pro, <strong>you are protected from water-overflow related damage</strong> — including foundation cracks, roof rot, basement flooding, and landscape erosion.</p>
+  </div>
+</div>
+
+<!-- COST ESTIMATOR -->
+<section class="cost-estimator" id="estimate">
+  <div class="cost-badge">🏷️ You will be surprised how affordable LeafGuard Pro is!</div>
+  <h2>See How Much Would LeafGuard Pro Cost In Your Location</h2>
+  <div class="estimator-card">
+    <h3>Select your approximate home square footage</h3>
+    <div class="sqft-options">
+      <button class="sqft-btn" onclick="selectSqft(this)">
+        <div class="sqft-num">1000</div>
+        <div class="sqft-unit">sq.ft.</div>
+      </button>
+      <button class="sqft-btn" onclick="selectSqft(this)">
+        <div class="sqft-num">1500</div>
+        <div class="sqft-unit">sq.ft.</div>
+      </button>
+      <button class="sqft-btn" onclick="selectSqft(this)">
+        <div class="sqft-num">2000</div>
+        <div class="sqft-unit">sq.ft.</div>
+      </button>
+      <button class="sqft-btn active" onclick="selectSqft(this)">
+        <div class="sqft-num">2500+</div>
+        <div class="sqft-unit">sq.ft.</div>
+      </button>
+    </div>
+    <button class="estimate-btn">Estimate LeafGuard Pro Cost</button>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="reviews-header">
+    <div class="section-label">Customer Reviews</div>
+    <h2 class="section-title">What LeafGuard Pro Customers Are Saying</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-title">Very helpful!</div>
+      <p class="review-text">The representative was very helpful, demonstrated the product and how it functions, in comparison to others, and how much customer satisfaction means to the company. I would certainly refer this company to others.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">LD</div>
+        <div class="reviewer-name">Loretta Dunston</div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-title">Highly recommend!</div>
+      <p class="review-text">The process, from beginning to end, was handled very professionally and in a friendly manner. We had some challenges with our patio cover and the team went out of their way to make it work. The installer explained everything and was very helpful.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">DB</div>
+        <div class="reviewer-name">Dave Bennet</div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-title">Love our new gutters!</div>
+      <p class="review-text">The neighbors noticed and asked us where we got our gutters, and we said LeafGuard Pro! The team was fantastic from the free estimate to the installation. The crew was professional, knowledgeable, and efficient.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">PR</div>
+        <div class="reviewer-name">Patti Reed</div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-title">Completely painless experience!</div>
+      <p class="review-text">Yes, this whole experience, starting with the salesman, who explained all about the product and its many benefits to the installation who worked fast and left the work site clean. Completely painless, and I would recommend this to all.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">PA</div>
+        <div class="reviewer-name">Philip Amenta</div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-title">Quick and efficient!</div>
+      <p class="review-text">LeafGuard Pro was quick and efficient from my initial call for a quote to installation. My mother recommended them and I am so glad she did. The guys that showed up were professional and tidy. 5 star experience.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">KH</div>
+        <div class="reviewer-name">Korry Harrier</div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-title">Amazing company and service</div>
+      <p class="review-text">Great and courteous people. From the moment they gave me a quote until they left. Amazing work and quickly. I was able to practically get the work done immediately... and veterans work at the company!</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">AP</div>
+        <div class="reviewer-name">Amy P</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VETERANS -->
+<div class="veterans">
+  <div class="veterans-text">
+    <h2>🇺🇸 Thank You To Our Veterans!</h2>
+    <p>Many LeafGuard Pro employees, customers, family and friends are military veterans and we wanted to thank them for their service.</p>
+    <p>So… for anyone who served in the U.S. Military — <strong>active or retired</strong> — we take an <strong>EXTRA 10% off</strong> the cost of LeafGuard Pro.</p>
+    <p>As a proud, American-founded business, it's our small way of saying, "Thank you for your service to our great nation!"</p>
+    <a href="#estimate" class="btn-primary" style="margin-top:10px; width:fit-content;">Claim Your Discount</a>
+  </div>
+  <div class="veterans-img">
+    <svg width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#8a94a8" stroke-width="2"/><circle cx="24" cy="28" r="8" stroke="#8a94a8" stroke-width="2"/><path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#8a94a8" stroke-width="2"/></svg>
+    <span>Add your image here</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div style="font-size:18px; font-weight:700; color:white; margin-bottom:6px;">🍃 LeafGuard Pro</div>
+    <div class="footer-copy">© 2026 LeafGuard Pro. All rights reserved.</div>
+  </div>
+  <div class="footer-links">
+    <a href="#">Terms Of Use</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Do Not Sell</a>
+    <a href="#">Careers</a>
+    <a href="#">Contact Us</a>
+  </div>
+  <div>
+    <div style="font-size:13px; color:rgba(255,255,255,0.5); margin-bottom:10px; text-align:right;">Follow Us</div>
+    <div class="social-icons">
+      <a class="social-icon" href="#">f</a>
+      <a class="social-icon" href="#">in</a>
+      <a class="social-icon" href="#">▶</a>
+      <a class="social-icon" href="#">𝕏</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function selectSqft(el) {
+    document.querySelectorAll('.sqft-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+  }
+</script>
+</body>
+</html>
