@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <>
-      <TopBar />
+       <TopBar />
       <Nav />
       <HeroSection />
       <TrustBar />
