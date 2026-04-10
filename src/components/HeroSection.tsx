@@ -30,14 +30,7 @@ const HeroSection = () => {
         <div className="hero-note">* Installation time may vary depending on home size and scope of work.</div>
       </div>
       <div className="hero-image-col">
-        <div className="hero-img-placeholder">
-          <svg className="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="4" y="12" width="56" height="40" rx="4" stroke="#2a7a2a" strokeWidth="2.5" />
-            <circle cx="24" cy="28" r="8" stroke="#2a7a2a" strokeWidth="2.5" />
-            <path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#2a7a2a" strokeWidth="2.5" strokeLinejoin="round" />
-          </svg>
-          Add your hero image here
-        </div>
+        <img src="/src/assets/holding.png" alt="Homeowner with LeafGuard Pro" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
         <div className="hero-stats">
           <div className="hero-stat-item">
             <div className="hero-stat-num">42M+</div>

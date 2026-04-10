@@ -11,10 +11,7 @@ const FeatureRows = () => {
     <>
       {/* AFFORDABLE */}
       <div className="feature-row bg-light">
-        <div className="img-placeholder img-ph-wide">
-          <PhIconWide />
-          Add your image here
-        </div>
+        <img src="/src/assets/stacks.png" alt="Affordable installation" style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
         <div className="feature-text">
           <h2>Why LeafGuard Pro Is So Affordable?</h2>
           <p>
@@ -27,10 +24,7 @@ const FeatureRows = () => {
 
       {/* PROTECTS HOME */}
       <div className="feature-row reverse">
-        <div className="img-placeholder img-ph-wide">
-          <PhIconWide />
-          Add your image here
-        </div>
+        <img src="/src/assets/roof.png" alt="Home protection" style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
         <div className="feature-text">
           <h2>LeafGuard Pro Helps Protect Your Entire Home</h2>
           <p>

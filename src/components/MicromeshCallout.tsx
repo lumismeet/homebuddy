@@ -23,13 +23,8 @@ const MicromeshCallout = () => {
           </div>
         </div>
       </div>
-      <div className="micromesh-img-col">
-        <svg width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="12" width="56" height="40" rx="4" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
-          <circle cx="24" cy="28" r="8" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
-          <path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
-        </svg>
-        <span style={{ color: "rgba(255,255,255,0.3)", fontSize: "13px", fontWeight: 600 }}>Add your image here</span>
+      <div className="micromesh-img-col" style={{ padding: 0, overflow: "hidden" }}>
+        <img src="/src/assets/soiled.png" alt="Clogged gutter debris" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
       </div>
     </div>
   );

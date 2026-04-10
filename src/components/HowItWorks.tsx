@@ -4,14 +4,7 @@ const HowItWorks = () => {
       <div className="section-label">How It Works</div>
       <h2 className="section-title">Award-Winning Technology That Performs</h2>
       <div className="how-grid">
-        <div className="img-placeholder img-ph-tall">
-          <svg className="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" strokeWidth="2" />
-            <circle cx="24" cy="28" r="8" stroke="#5a7a5a" strokeWidth="2" />
-            <path d="M4 44 L20 30 L32 42 L44 28 L60 44" stroke="#5a7a5a" strokeWidth="2" />
-          </svg>
-          Add your image here
-        </div>
+        <img src="/src/assets/roof.png" alt="Roof installation" style={{ width: "100%", height: "380px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
         <div className="feature-steps">
           <div className="step">
             <div className="step-num">1</div>

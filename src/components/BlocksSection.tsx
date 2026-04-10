@@ -50,9 +50,8 @@ const BlocksSection = () => {
       <div className="blocks-grid">
         {blocks.map((block) => (
           <div className="block-card" key={block.title}>
-            <div className="block-card-img">
-              <PhIcon />
-              Photo placeholder
+            <div className="block-card-img" style={{ padding: 0, overflow: "hidden" }}>
+              <img src="/src/assets/soiled.png" alt={block.title} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
             <div className="block-card-body">
               <h4>{block.emoji} {block.title}</h4>
