@@ -1,3 +1,5 @@
+import soiledImg from "@/assets/soiled.png";
+
 const MicromeshCallout = () => {
   return (
     <div className="micromesh-callout">
@@ -24,7 +26,7 @@ const MicromeshCallout = () => {
         </div>
       </div>
       <div className="micromesh-img-col" style={{ padding: 0, overflow: "hidden" }}>
-        <img src="/src/assets/soiled.png" alt="Clogged gutter debris" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        <img src={soiledImg} alt="Clogged gutter debris" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
       </div>
     </div>
   );

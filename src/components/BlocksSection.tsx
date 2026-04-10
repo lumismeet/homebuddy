@@ -1,3 +1,5 @@
+import soiledImg from "@/assets/soiled.png";
+
 const PhIcon = () => (
   <svg className="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" strokeWidth="2" />
@@ -51,7 +53,7 @@ const BlocksSection = () => {
         {blocks.map((block) => (
           <div className="block-card" key={block.title}>
             <div className="block-card-img" style={{ padding: 0, overflow: "hidden" }}>
-              <img src="/src/assets/soiled.png" alt={block.title} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src={soiledImg} alt={block.title} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
             <div className="block-card-body">
               <h4>{block.emoji} {block.title}</h4>

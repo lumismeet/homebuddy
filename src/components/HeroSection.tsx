@@ -1,3 +1,5 @@
+import holdingImg from "@/assets/holding.png";
+
 const HeroSection = () => {
   return (
     <section className="hero" style={{ padding: 0 }}>
@@ -30,7 +32,7 @@ const HeroSection = () => {
         <div className="hero-note">* Installation time may vary depending on home size and scope of work.</div>
       </div>
       <div className="hero-image-col">
-        <img src="/src/assets/holding.png" alt="Homeowner with LeafGuard Pro" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        <img src={holdingImg} alt="Homeowner with LeafGuard Pro" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
         <div className="hero-stats">
           <div className="hero-stat-item">
             <div className="hero-stat-num">42M+</div>

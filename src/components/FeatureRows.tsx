@@ -1,3 +1,6 @@
+import stacksImg from "@/assets/stacks.png";
+import roofImg from "@/assets/roof.png";
+
 const PhIconWide = () => (
   <svg className="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="4" y="12" width="56" height="40" rx="4" stroke="#5a7a5a" strokeWidth="2" />
@@ -11,7 +14,7 @@ const FeatureRows = () => {
     <>
       {/* AFFORDABLE */}
       <div className="feature-row bg-light">
-        <img src="/src/assets/stacks.png" alt="Affordable installation" style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
+        <img src={stacksImg} alt="Affordable installation" style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
         <div className="feature-text">
           <h2>Why LeafGuard Pro Is So Affordable?</h2>
           <p>
@@ -24,7 +27,7 @@ const FeatureRows = () => {
 
       {/* PROTECTS HOME */}
       <div className="feature-row reverse">
-        <img src="/src/assets/roof.png" alt="Home protection" style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
+        <img src={roofImg} alt="Home protection" style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
         <div className="feature-text">
           <h2>LeafGuard Pro Helps Protect Your Entire Home</h2>
           <p>

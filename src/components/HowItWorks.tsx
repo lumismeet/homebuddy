@@ -1,10 +1,12 @@
+import roofImg from "@/assets/roof.png";
+
 const HowItWorks = () => {
   return (
     <section className="how-it-works">
       <div className="section-label">How It Works</div>
       <h2 className="section-title">Award-Winning Technology That Performs</h2>
       <div className="how-grid">
-        <img src="/src/assets/roof.png" alt="Roof installation" style={{ width: "100%", height: "380px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
+        <img src={roofImg} alt="Roof installation" style={{ width: "100%", height: "380px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
         <div className="feature-steps">
           <div className="step">
             <div className="step-num">1</div>

@@ -1,3 +1,5 @@
+import stacksImg from "@/assets/stacks.png";
+
 const VeteransSection = () => {
   return (
     <div className="veterans">
@@ -20,7 +22,7 @@ const VeteransSection = () => {
         </a>
       </div>
       <div className="veterans-img" style={{ padding: 0, overflow: "hidden" }}>
-        <img src="/src/assets/stacks.png" alt="Veterans" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        <img src={stacksImg} alt="Veterans" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
       </div>
     </div>
   );
