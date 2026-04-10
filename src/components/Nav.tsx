@@ -8,7 +8,8 @@ const Nav = () => {
           <div className="logo-sub">Gutter Protection</div>
         </div>
       </a>
-      <a href="#estimate" className="nav-cta">Get Free Estimate</a>
+      <span className="nav-advertorial">ADVERTORIAL</span>
+      <a href="#" className="nav-contractor">I'm a contractor</a>
     </nav>
   );
 };
