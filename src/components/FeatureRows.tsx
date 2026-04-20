@@ -16,11 +16,11 @@ const FeatureRows = () => {
       <div className="feature-row bg-light">
         <img src={stacksImg} alt="Affordable installation" style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
         <div className="feature-text">
-          <h2>Why LeafGuard Pro Is So Affordable?</h2>
+          <h2>Why ClearFlow Guard Costs Less Than You'd Expect</h2>
           <p>
-            LeafGuard Pro installs directly on top of your existing gutters — so you're{" "}
-            <strong>not required to buy all new gutters</strong>. This saves you thousands in material and labor costs.
-            Our certified installers handle the entire job in a single visit, typically under 6 hours.
+            Because ClearFlow Guard works with your current gutters, you're{" "}
+            <strong>never paying for a full gutter replacement</strong>. Our team handles everything in a single visit —
+            cutting down on labor time and keeping your total cost surprisingly low.
           </p>
         </div>
       </div>
@@ -29,11 +29,11 @@ const FeatureRows = () => {
       <div className="feature-row reverse">
         <img src={roofImg} alt="Home protection" style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
         <div className="feature-text">
-          <h2>LeafGuard Pro Helps Protect Your Entire Home</h2>
+          <h2>Clogged Gutters Can Cost You More Than You Think</h2>
           <p>
-            From roof to foundation, damage caused by clogged gutters can be devastating for your home. With LeafGuard
-            Pro, <strong>you are protected from water-overflow related damage</strong> — including foundation cracks,
-            roof rot, basement flooding, and landscape erosion.
+            When gutters overflow, the damage spreads fast. ClearFlow Guard helps you avoid{" "}
+            <strong>foundation erosion, roof deterioration, basement leaks, and costly landscape repair</strong> —
+            all of which can result from a single season of neglected gutters.
           </p>
         </div>
       </div>

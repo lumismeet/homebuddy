@@ -4,8 +4,8 @@ const Nav = () => {
       <a className="logo" href="#">
         <div className="logo-icon">🏠</div>
         <div>
-          <div className="logo-text">Better<span>Home</span> Pro</div>
-          <div className="logo-sub">Gutter Protection</div>
+          <div className="logo-text">Clear<span>Flow</span> Guard</div>
+          <div className="logo-sub">Premium Gutter Solutions</div>
         </div>
       </a>
       <span className="nav-advertorial">ADVERTORIAL</span>

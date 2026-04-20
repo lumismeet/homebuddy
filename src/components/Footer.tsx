@@ -2,8 +2,8 @@ const Footer = () => {
   return (
     <footer>
       <div>
-        <div style={{ fontSize: "18px", fontWeight: 700, color: "white", marginBottom: "6px" }}>🍃 LeafGuard Pro</div>
-        <div className="footer-copy">© 2026 LeafGuard Pro. All rights reserved.</div>
+        <div style={{ fontSize: "18px", fontWeight: 700, color: "white", marginBottom: "6px" }}>💧 ClearFlow Guard</div>
+        <div className="footer-copy">© 2026 ClearFlow Guard. All rights reserved.</div>
       </div>
       <div className="footer-links">
         <a href="#">Terms Of Use</a>

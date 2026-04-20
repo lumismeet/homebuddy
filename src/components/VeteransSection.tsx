@@ -4,21 +4,20 @@ const VeteransSection = () => {
   return (
     <div className="veterans">
       <div className="veterans-text">
-        <h2>🇺🇸 Thank You To Our Veterans!</h2>
+        <h2>🇺🇸 A Special Thank You to Those Who Served</h2>
         <p>
-          Many LeafGuard Pro employees, customers, family and friends are military veterans and we wanted to thank them
-          for their service.
+          At ClearFlow Guard, we have deep respect for the men and women who've dedicated their lives to protecting this country.
+          Many on our team are veterans themselves — and we're proud to give back.
         </p>
         <p>
-          So… for anyone who served in the U.S. Military — <strong>active or retired</strong> — we take an{" "}
-          <strong>EXTRA 10% off</strong> the cost of LeafGuard Pro.
+          Any U.S. Military member — <strong>active duty or retired</strong> — receives an{" "}
+          <strong>EXTRA 10% off</strong> their total installation cost. No hoops, no fine print.
         </p>
         <p>
-          As a proud, American-founded business, it's our small way of saying, "Thank you for your service to our great
-          nation!"
+          It's a small gesture from a proudly American company — our sincere way of saying, "Your service matters, and we won't forget it."
         </p>
         <a href="#estimate" className="btn-primary" style={{ marginTop: "10px", width: "fit-content" }}>
-          Claim Your Discount
+          Claim Your Veteran Discount
         </a>
       </div>
       <div className="veterans-img" style={{ padding: 0, overflow: "hidden" }}>

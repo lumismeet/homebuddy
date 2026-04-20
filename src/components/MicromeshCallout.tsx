@@ -4,24 +4,24 @@ const MicromeshCallout = () => {
   return (
     <div className="micromesh-callout">
       <div className="micromesh-text">
-        <div className="kicker">Technology</div>
-        <h2>The Micromesh Technology</h2>
+        <div className="kicker">Built Different</div>
+        <h2>Engineering That Outlasts Every Season</h2>
         <p>
-          To protect your gutters from debris, our micromesh screen is made out of surgical grade stainless steel which
-          is unlikely to rust or corrode. At only 275 microns fine, common debris simply cannot get through.
+          ClearFlow Guard uses a surgical-grade stainless steel micromesh that won't rust, warp, or weaken over time.
+          The 275-micron openings let water flow freely while rejecting every type of debris — leaves, seeds, needles, and even roof grit.
         </p>
         <div className="micromesh-specs">
           <div className="spec-chip">
             <div className="spec-chip-val">275μ</div>
-            <div className="spec-chip-label">Microns Fine</div>
+            <div className="spec-chip-label">Micron Filtration</div>
           </div>
           <div className="spec-chip">
             <div className="spec-chip-val">316</div>
-            <div className="spec-chip-label">Surgical Grade Steel</div>
+            <div className="spec-chip-label">Surgical Steel Grade</div>
           </div>
           <div className="spec-chip">
             <div className="spec-chip-val">∞</div>
-            <div className="spec-chip-label">Lifetime Warranty</div>
+            <div className="spec-chip-label">No-Clog Guarantee</div>
           </div>
         </div>
       </div>

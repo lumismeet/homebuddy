@@ -1,7 +1,7 @@
 const TopBar = () => {
   return (
     <div className="topbar">
-      🏆 America's <span>#1 Rated</span> Gutter Protection System — Available in Your Location!
+      🏆 The Smart Way to <span>Protect Your Home</span> — Get a Free Gutter Guard Estimate Today!
     </div>
   );
 };

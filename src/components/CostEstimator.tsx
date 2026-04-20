@@ -7,10 +7,10 @@ const CostEstimator = () => {
 
   return (
     <section className="cost-estimator" id="estimate">
-      <div className="cost-badge">🏷️ You will be surprised how affordable LeafGuard Pro is!</div>
-      <h2>See How Much Would LeafGuard Pro Cost In Your Location</h2>
+      <div className="cost-badge">🏷️ Most homeowners are surprised by how affordable it is!</div>
+      <h2>Find Out What ClearFlow Guard Would Cost for Your Home</h2>
       <div className="estimator-card">
-        <h3>Select your approximate home square footage</h3>
+        <h3>Choose your approximate home square footage</h3>
         <div className="sqft-options">
           {sqftOptions.map((option) => (
             <button
@@ -23,7 +23,7 @@ const CostEstimator = () => {
             </button>
           ))}
         </div>
-        <button className="estimate-btn">Estimate LeafGuard Pro Cost</button>
+        <button className="estimate-btn">Get My Free Cost Estimate</button>
       </div>
     </section>
   );

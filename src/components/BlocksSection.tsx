@@ -12,32 +12,32 @@ const blocks = [
   {
     emoji: "🍂",
     title: "No Leaves",
-    desc: "Micromesh blocks fallen leaves before they enter and clog your gutters.",
+    desc: "Our precision micromesh surface lets water through while deflecting leaves right off the edge.",
   },
   {
     emoji: "🌲",
     title: "No Pine Needles",
-    desc: "Even tiny pine needles are stopped by the 275-micron fine stainless mesh.",
+    desc: "The ultra-fine 275-micron mesh is small enough to stop even the thinnest pine needles.",
   },
   {
     emoji: "🌱",
     title: "No Seed Pods",
-    desc: "Seed pods and helicopters can't find their way into your gutters.",
+    desc: "Helicopter seeds and pods can't grip or pass through our smooth, sealed mesh surface.",
   },
   {
     emoji: "🪵",
-    title: "No Sticks",
-    desc: "Twigs and sticks shed off the surface thanks to the sloped design.",
+    title: "No Sticks or Twigs",
+    desc: "The angled profile guides sticks and twigs off your roof instead of into your gutters.",
   },
   {
     emoji: "🐛",
     title: "No Insects",
-    desc: "Keeps out insects and other pests that nest in moist, clogged gutters.",
+    desc: "A fully sealed barrier means no gaps for mosquitoes, wasps, or other pests to nest in.",
   },
   {
     emoji: "🐀",
-    title: "No Rodents",
-    desc: "Sealed coverage eliminates entry points for small rodents and birds.",
+    title: "No Rodents or Birds",
+    desc: "Complete gutter enclosure removes the entry points that small animals love to exploit.",
   },
 ];
 
@@ -46,8 +46,8 @@ const BlocksSection = () => {
     <section className="blocks-section">
       <div className="blocks-label">
         <div className="section-label">Protection</div>
-        <h2 className="section-title">Protects Your Gutter From Clogs</h2>
-        <p className="section-sub">Prevents common debris from entering the gutter that can cause costly damage.</p>
+        <h2 className="section-title">Your Gutters Stay Clear, No Matter the Season</h2>
+        <p className="section-sub">From autumn leaves to winter debris — our system handles every threat so you never have to climb a ladder again.</p>
       </div>
       <div className="blocks-grid">
         {blocks.map((block) => (
