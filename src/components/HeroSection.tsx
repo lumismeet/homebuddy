@@ -6,12 +6,12 @@ const HeroSection = () => {
       <div className="hero-content">
         <div className="hero-badge">📍 Now Serving Your Area!</div>
         <h1>
-          Stop Cleaning Gutters Forever — <span className="highlight">Protect Your Home</span> with Premium Gutter Guards
+          Stop Cleaning Gutters Forever, <span className="highlight">Protect Your Home</span> with Premium Gutter Guards
         </h1>
-        <p className="hero-sub">Designed for all home types — works with your existing gutters, no full replacement required.</p>
+        <p className="hero-sub">Designed for all home types , works with your existing gutters, no full replacement required.</p>
         <div className="hero-bullets">
           <div className="hero-bullet">
-            <div className="bullet-num">1</div> Lifetime No-Clog Guarantee — We Fix It Free, Forever
+            <div className="bullet-num">1</div> Lifetime No-Clog Guarantee , We Fix It Free, Forever
           </div>
           <div className="hero-bullet">
             <div className="bullet-num">2</div> Shields Your Roof, Walls &amp; Foundation from Water Damage
@@ -20,7 +20,7 @@ const HeroSection = () => {
             <div className="bullet-num">3</div> Ultra-Fine 275-Micron Surgical Steel Mesh
           </div>
           <div className="hero-bullet">
-            <div className="bullet-num">4</div> Rust-Proof Stainless Steel — Built to Last Decades
+            <div className="bullet-num">4</div> Rust-Proof Stainless Steel , Built to Last Decades
           </div>
           <div className="hero-bullet">
             <div className="bullet-num">5</div> Certified Professionals Handle the Entire Job

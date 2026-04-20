@@ -5,7 +5,7 @@ const Nav = () => {
         <div className="logo-icon">🏠</div>
         <div>
           <div className="logo-text">Clear<span>Flow</span> Guard</div>
-          <div className="logo-sub">Premium Gutter Solutions</div>
+          <div className="logo-sub">Premium, Gutter Solutions</div>
         </div>
       </a>
       <span className="nav-advertorial">ADVERTORIAL</span>
