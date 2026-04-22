@@ -1,10 +1,11 @@
 import holdingImg from "@/assets/holding.png";
+import { MapPin, CheckCircle2, Gift } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="hero" style={{ padding: 0 }}>
       <div className="hero-content">
-        <div className="hero-badge">📍 Now Serving Your Area!</div>
+        <div className="hero-badge"><MapPin size={14} style={{ display: "inline", verticalAlign: "middle", marginRight: 4 }} /> Now Serving Your Area!</div>
         <h1>
           Stop Cleaning Gutters Forever, <span className="highlight">Protect Your Home</span> with Premium Gutter Guards
         </h1>
@@ -35,11 +36,11 @@ const HeroSection = () => {
         <img src={holdingImg} alt="Homeowner with LeafGuard Pro" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
         <div className="hero-stats">
           <div className="hero-stat-item">
-            <div className="hero-stat-num">✅</div>
+            <div className="hero-stat-num"><CheckCircle2 size={22} /></div>
             <div className="hero-stat-label">Certified Installers</div>
           </div>
           <div className="hero-stat-item">
-            <div className="hero-stat-num">🎁</div>
+            <div className="hero-stat-num"><Gift size={22} /></div>
             <div className="hero-stat-label">Free Estimate</div>
           </div>
           <div className="hero-stat-item">

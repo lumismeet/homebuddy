@@ -19,7 +19,7 @@ const FeatureRows = () => {
           <h2>Why ClearFlow Guard Costs Less Than You'd Expect</h2>
           <p>
             Because ClearFlow Guard works with your current gutters, you're{" "}
-            <strong>never paying for a full gutter replacement</strong>. Our team handles everything in a single visit —
+            <strong>never paying for a full gutter replacement</strong>. Our team handles everything in a single visit ,
             cutting down on labor time and keeping your total cost surprisingly low.
           </p>
         </div>
@@ -32,7 +32,7 @@ const FeatureRows = () => {
           <h2>Clogged Gutters Can Cost You More Than You Think</h2>
           <p>
             When gutters overflow, the damage spreads fast. ClearFlow Guard helps you avoid{" "}
-            <strong>foundation erosion, roof deterioration, basement leaks, and costly landscape repair</strong> —
+            <strong>foundation erosion, roof deterioration, basement leaks, and costly landscape repair</strong> ,
             all of which can result from a single season of neglected gutters.
           </p>
         </div>

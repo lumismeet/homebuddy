@@ -1,8 +1,12 @@
+import { Droplets } from "lucide-react";
+
 const Footer = () => {
   return (
     <footer>
       <div>
-        <div style={{ fontSize: "18px", fontWeight: 700, color: "white", marginBottom: "6px" }}>💧 ClearFlow Guard</div>
+        <div style={{ fontSize: "18px", fontWeight: 700, color: "white", marginBottom: "6px", display: "flex", alignItems: "center", gap: 6 }}>
+          <Droplets size={18} /> ClearFlow Guard
+        </div>
         <div className="footer-copy">© 2026 ClearFlow Guard. All rights reserved.</div>
       </div>
       <div className="footer-links">
@@ -22,6 +26,9 @@ const Footer = () => {
           <a className="social-icon" href="#">▶</a>
           <a className="social-icon" href="#">𝕏</a>
         </div>
+      </div>
+      <div className="footer-advertorial-disclaimer">
+        ClearFlowGuard is an independent, advertising-supported comparison website. The products and offers that appear on this website are from third-party home service partners and advertisers from which ClearFlowGuard may receive compensation. This compensation may influence which products we feature, how they are presented, and where they appear on the page. ClearFlowGuard is not a licensed home service provider or contractor. Content on this site is provided for informational purposes only and does not constitute home improvement advice. Available rates and offers vary by location, home type, and other factors and are subject to change without notice. Not all products or offers are available in all areas.
       </div>
     </footer>
   );

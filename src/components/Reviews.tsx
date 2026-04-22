@@ -8,7 +8,7 @@ interface Review {
 const reviews: Review[] = [
   {
     title: "Best home upgrade we've made!",
-    text: "I was hesitant at first, but the consultant walked us through everything clearly. Installation was clean and fast — the crew even swept up after themselves. Haven't touched my gutters since. Absolutely worth it.",
+    text: "I was hesitant at first, but the consultant walked us through everything clearly. Installation was clean and fast , the crew even swept up after themselves. Haven't touched my gutters since. Absolutely worth it.",
     initials: "MR",
     name: "Michael Rosario",
   },

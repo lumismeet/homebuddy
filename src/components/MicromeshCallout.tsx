@@ -8,7 +8,7 @@ const MicromeshCallout = () => {
         <h2>Engineering That Outlasts Every Season</h2>
         <p>
           ClearFlow Guard uses a surgical-grade stainless steel micromesh that won't rust, warp, or weaken over time.
-          The 275-micron openings let water flow freely while rejecting every type of debris — leaves, seeds, needles, and even roof grit.
+          The 275-micron openings let water flow freely while rejecting every type of debris , leaves, seeds, needles, and even roof grit.
         </p>
         <div className="micromesh-specs">
           <div className="spec-chip">
