@@ -1,35 +1,46 @@
+import leavesImg from "@/assets/leaves.png";
+import pineImg from "@/assets/pine.png";
+import seedpodsImg from "@/assets/seedpods.png";
+import sticksImg from "@/assets/sticksntwigs.png";
+import insectsImg from "@/assets/insects.png";
 import soiledImg from "@/assets/soiled.png";
 import { Leaf, TreePine, Sprout, Layers, Bug, Shield } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-const blocks: { icon: LucideIcon; title: string; desc: string }[] = [
+const blocks: { icon: LucideIcon; img: string; title: string; desc: string }[] = [
   {
     icon: Leaf,
+    img: leavesImg,
     title: "No Leaves",
     desc: "Our precision micromesh surface lets water through while deflecting leaves right off the edge.",
   },
   {
     icon: TreePine,
+    img: pineImg,
     title: "No Pine Needles",
     desc: "The ultra-fine 275-micron mesh is small enough to stop even the thinnest pine needles.",
   },
   {
     icon: Sprout,
+    img: seedpodsImg,
     title: "No Seed Pods",
     desc: "Helicopter seeds and pods can't grip or pass through our smooth, sealed mesh surface.",
   },
   {
     icon: Layers,
+    img: sticksImg,
     title: "No Sticks or Twigs",
     desc: "The angled profile guides sticks and twigs off your roof instead of into your gutters.",
   },
   {
     icon: Bug,
+    img: insectsImg,
     title: "No Insects",
     desc: "A fully sealed barrier means no gaps for mosquitoes, wasps, or other pests to nest in.",
   },
   {
     icon: Shield,
+    img: soiledImg,
     title: "No Rodents or Birds",
     desc: "Complete gutter enclosure removes the entry points that small animals love to exploit.",
   },
@@ -49,7 +60,7 @@ const BlocksSection = () => {
           return (
             <div className="block-card" key={block.title}>
               <div className="block-card-img" style={{ padding: 0, overflow: "hidden" }}>
-                <img src={soiledImg} alt={block.title} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                <img src={block.img} alt={block.title} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
               </div>
               <div className="block-card-body">
                 <h4 style={{ display: "flex", alignItems: "center", gap: 8 }}>
