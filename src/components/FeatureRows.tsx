@@ -1,5 +1,5 @@
-import stacksImg from "@/assets/stacks.png";
-import roofImg from "@/assets/roof.png";
+import pipecleanMp4 from "@/assets/pipeclean.mp4";
+import guttercleanMp4 from "@/assets/gutterclean.mp4";
 
 const PhIconWide = () => (
   <svg className="ph-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +14,7 @@ const FeatureRows = () => {
     <>
       {/* AFFORDABLE */}
       <div className="feature-row bg-light">
-        <img src={stacksImg} alt="Affordable installation" style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
+        <video src={pipecleanMp4} autoPlay muted loop playsInline style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
         <div className="feature-text">
           <h2>Why ClearFlow Guard Costs Less Than You'd Expect</h2>
           <p>
@@ -27,7 +27,7 @@ const FeatureRows = () => {
 
       {/* PROTECTS HOME */}
       <div className="feature-row reverse">
-        <img src={roofImg} alt="Home protection" style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
+        <video src={guttercleanMp4} autoPlay muted loop playsInline style={{ width: "100%", height: "280px", objectFit: "cover", borderRadius: "12px", display: "block" }} />
         <div className="feature-text">
           <h2>Clogged Gutters Can Cost You More Than You Think</h2>
           <p>
